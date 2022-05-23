@@ -6,10 +6,6 @@ Rock = (input_choices[0])
 Paper = (input_choices[1])
 Scissors = (input_choices[2])
 
-if Rock.lower() != Rock.upper():
-
-
-
 while True:
     print("\nHello, welcome to my version of rock paper scissors this took a while I guess\n")
     choice_1 = input("Choose Rock, Paper or Scissors?\n(Write First Letter In Caps.):\n\n")
