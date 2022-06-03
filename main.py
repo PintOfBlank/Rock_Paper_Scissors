@@ -1,7 +1,5 @@
 import random
 
-counter = 1
-
 pos_input = ["Rock", "Paper", "Scissors"]
 
 rock = (pos_input[0])
@@ -11,7 +9,7 @@ scissors = (pos_input[2])
 print("\nHello, welcome to my version of rock paper scissors this took a while I guess\n")
 
 while True:
-    while counter < 2:
+    while True:
         choice_1 = input("Choose Rock, Paper or Scissors?:\n\n")
         computer_choice = random.choice(pos_input)
         if choice_1 == "rock":
@@ -19,49 +17,49 @@ while True:
                 print("VS.")
                 print(computer_choice)
                 print("\nYou Broke His Scissors! (You Won!)")
-                counter = counter + 1
+                break
             elif computer_choice == paper:
                 print("VS.")
                 print(computer_choice)
                 print("\nHe Wrapped Your Rock In His Paper! (You Lost!)")
-                counter = counter + 1
+                break
             elif computer_choice == scissors:
                 print("VS.")
                 print(computer_choice)
                 print("\nTie")
-                counter = counter + 1
+                break
         elif choice_1 == "paper":
             if computer_choice == rock:
                 print("VS.")
                 print(computer_choice)
                 print("\nYou Wrapped His Rock In Your Paper! (You Won!)")
-                counter = counter + 1
+                break
             elif computer_choice == scissors:
                 print("VS.")
                 print(computer_choice)
                 print("\nHe Cut Your Paper  Up! (You Lost!)")
-                counter = counter + 1
+                break
             elif computer_choice == scissors:
                 print("VS.")
                 print(computer_choice)
                 print("\nTie")
-                counter = counter + 1
+                break
         elif choice_1 == "scissors":
             if computer_choice == paper:
                 print("VS.")
                 print(computer_choice)
                 print("\nYou Cut His Paper Up! (You Won!)")
-                counter = counter + 1
+                break
             elif computer_choice == rock:
                 print("VS.")
                 print(computer_choice)
                 print("\nHis Rock Broke Your Scissors! (You Lost!)")
-                counter = counter + 1
+                break
             elif computer_choice == scissors:
                 print("VS.")
                 print(computer_choice)
                 print("\nTie")
-                counter = counter + 1
+                break
         elif choice_1 == "q":
             quit("\nThanks For Playing :3")
         else:
