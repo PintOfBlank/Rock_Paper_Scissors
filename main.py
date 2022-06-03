@@ -1,39 +1,77 @@
 import random
 
-input_choices = ["Rock", "Paper", "Scissors"]
+counter = 1
 
-Rock = (input_choices[0])
-Paper = (input_choices[1])
-Scissors = (input_choices[2])
+pos_input = ["Rock", "Paper", "Scissors"]
+
+rock = (pos_input[0])
+paper = (pos_input[1])
+scissors = (pos_input[2])
+
+print("\nHello, welcome to my version of rock paper scissors this took a while I guess\n")
 
 while True:
-    print("\nHello, welcome to my version of rock paper scissors this took a while I guess\n")
-    choice_1 = input("Choose Rock, Paper or Scissors?\n(Write First Letter In Caps.):\n\n")
-    print("VS.")
-    computer_choice = random.choice(input_choices)
-    print(computer_choice)
+    while counter < 2:
+        choice_1 = input("Choose Rock, Paper or Scissors?:\n\n")
+        computer_choice = random.choice(pos_input)
+        if choice_1 == "rock":
+            if computer_choice == scissors:
+                print("VS.")
+                print(computer_choice)
+                print("\nYou Broke His Scissors! (You Won!)")
+                counter = counter + 1
+            elif computer_choice == paper:
+                print("VS.")
+                print(computer_choice)
+                print("\nHe Wrapped Your Rock In His Paper! (You Lost!)")
+                counter = counter + 1
+            elif computer_choice == scissors:
+                print("VS.")
+                print(computer_choice)
+                print("\nTie")
+                counter = counter + 1
+        elif choice_1 == "paper":
+            if computer_choice == rock:
+                print("VS.")
+                print(computer_choice)
+                print("\nYou Wrapped His Rock In Your Paper! (You Won!)")
+                counter = counter + 1
+            elif computer_choice == scissors:
+                print("VS.")
+                print(computer_choice)
+                print("\nHe Cut Your Paper  Up! (You Lost!)")
+                counter = counter + 1
+            elif computer_choice == scissors:
+                print("VS.")
+                print(computer_choice)
+                print("\nTie")
+                counter = counter + 1
+        elif choice_1 == "scissors":
+            if computer_choice == paper:
+                print("VS.")
+                print(computer_choice)
+                print("\nYou Cut His Paper Up! (You Won!)")
+                counter = counter + 1
+            elif computer_choice == rock:
+                print("VS.")
+                print(computer_choice)
+                print("\nHis Rock Broke Your Scissors! (You Lost!)")
+                counter = counter + 1
+            elif computer_choice == scissors:
+                print("VS.")
+                print(computer_choice)
+                print("\nTie")
+                counter = counter + 1
+        elif choice_1 == "q":
+            quit("\nThanks For Playing :3")
+        else:
+            print("\nTry Again\n")
 
-    if choice_1 == computer_choice:
-        print("\nTie!")
-    if choice_1 == Rock:
-        if computer_choice == Scissors:
-            print("\nYou Broke His Scissors! (You Won!)")
-        elif computer_choice == Paper:
-            print("\nHe Wrapped Your Rock In His Paper! (You Lost!)")
-    elif choice_1 == Paper:
-        if computer_choice == Rock:
-            print("\nYou Wrapped His Rock In Your Paper! (You Won!)")
-    elif computer_choice == Scissors:
-        print("\nHe Cut Your Paper  Up! (You Lost!)")
-    elif choice_1 == Scissors:
-        if computer_choice == Paper:
-            print("\nYou Cut His Paper Up! (You Won!)")
-    elif computer_choice == Rock:
-        print("\nHis Rock Broke Your Scissors! (You Lost!)")
 
+    counter = counter - 1
     play_again = input("Wanna Play Again?\n\n(Yes Or No?):\n\n")
-
-    if play_again == "Yes\n" or play_again == "yes\n" or play_again == "y\n":
-        print("Lets Go Again!")
-    elif play_again == "No\n" or play_again == "no\n" or play_again == "n\n":
+    if play_again == "Yes" or play_again == "yes" or play_again == "y":
+        print("\nLets Go Again!\n")
+    elif play_again == "No" or play_again == "no" or play_again == "n":
         break
+
