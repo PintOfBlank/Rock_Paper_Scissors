@@ -65,8 +65,6 @@ while True:
         else:
             print("\nTry Again\n")
 
-
-    counter = counter - 1
     play_again = input("Wanna Play Again?\n\n(Yes Or No?):\n\n")
     if play_again == "Yes" or play_again == "yes" or play_again == "y":
         print("\nLets Go Again!\n")
